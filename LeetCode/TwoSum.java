@@ -9,17 +9,6 @@
         throw new IllegalArgumentException("No solution");
     }
 
-// O(nlogn)
-
-    public static int[] twoSum(int[] nums, int target) {
-        Arrays.sort(nums);
-        for (int i = 0, l = nums.length; i < l; i++) {
-            int j = Arrays.binarySearch(nums, i + 1, l, target-nums[i]);
-            if (j > i) return new int[]{i, j};
-        }
-        return null;
-    }
-
 // O(n)
 
     public static int[] twoSum(int[] nums, int target) {
